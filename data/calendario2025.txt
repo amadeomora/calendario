@@ -1,0 +1,21 @@
+1,1,año nuevo
+6,1,reyes
+17,4,jueves santo
+18,4,viernes santo
+1,5,festivo,día del trabajo
+2,5,festivo,día de la comunidad de madrid
+15,5,festivo,san isidro
+25,7,santiago apostol
+15,8,festivo,asuncion de la virgen
+12,10,festivo,el pilar
+1,11,festivo,todos los santos
+9,11,festivo,la almudena
+6,12,festivo,constitución
+8,12,festivo,inmaculada concepción
+25,12,festivo,natividad
+
+13,10,nolectivo
+3,11,nolectivo
+10,11,nolectivo,almudena
+22,12,nolectivo,navidad
+23,12,nolectivo,navidad

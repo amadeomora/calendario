@@ -1,0 +1,10 @@
+.calendario-anual { font: normal 12px Tahoma, Arial, sans-serif; margin: 0; padding: 0; padding-bottom: 1.5em; text-align: center;}
+.calendario-anual table { display: inline-block; vertical-align: top; margin-bottom: 0.25rem;}
+.calendario { font-size: 100%; text-align: center; border: 1px solid #ddd; margin: 0.5em;}
+.calendario a { color: #033799; text-decoration: none;}
+.calendario thead th { color: #033799; font-weight: normal; padding: 0.1em;}
+.calendario td { padding-top: 0.2em; padding: 0.1em 0.3em 0.1em 0.3em;}
+.calendario td.domingo { color: #f00;}
+.calendario td.festivo { background-color: #f00; color: #fff;}
+.calendario td.nolectivo { background-color: orange; color: #fff;}
+.calendario-caption { color: #033799; font-weight: bold; padding: 0.2em;}

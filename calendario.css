@@ -1,0 +1,12 @@
+.calendario-anual { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; font-size: small; padding: 1rem; }
+.calendario-anual table { display: inline-block; vertical-align: top; margin: 0 0.25rem 0.25rem 0;}
+.calendario { border-collapse: collapse; font-family: system-ui, Arial; }
+.calendario a { text-decoration: none; color: inherit; width: 100%; height: 100%; }
+.calendario th, .calendario td { border: 1px solid #ddd; text-align: center; padding: 6px; width: 14.2857%; }
+.calendario thead th { background:#f5f5f5; font-weight:600; }
+.calendario td.empty { background:#fafafa; color: #bbb; }
+.calendario td.nolectivo { background:orange; color:#fff}
+.calendario td.festivo { background:#d00; color:#fff; }
+.calendario td.domingo { background:#f0f0f0; color:#d00; }
+.calendario td.today { background:#0078d4; color:#fff; border-color:#005a9e; }
+.calendario-caption { text-align:center; margin-bottom:6px; font-weight:700; }

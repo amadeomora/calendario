@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 async function renderYear(target, year) {
     // Cargar días no lectivos y festivos
     let [nolectivos, festivos] = await diasEspeciales(year);
-    pascuaNoLectivos(year).forEach(element => nolectivos.add(element));
-    navidadNoLectivos(year).forEach(element => nolectivos.add(element));
 
     // Calendario anual
     const id = '#' + target;
@@ -205,20 +203,35 @@ function navidadNoLectivos(year) {
 // Uso: let data = await fetchFile(url)
 
 async function fetchFile(url) {
-    const response = await fetch(url)
-    //if (!response.ok) console.log(response)
-    return await response.text()
+    try {
+        const response = await fetch(url)
+        //if (!response.ok) console.log(response)
+        if (!response.ok) return null
+        return await response.text()
+    } catch (error) {
+        return null
+    }
 }
 
-// Carga los días no lectivos y festivos desde un archivo de texto externo
+// Carga los días no lectivos y festivos
 // Uso: let [nolectivos, festivos] = await loadDiasEspeciales(year)
 
 async function diasEspeciales(year) {
-    const data = await fetchFile('./data/calendario' + year + '.txt')
     const nolectivos = new Set()
     const festivos = new Set()
 
-    if (!data) return
+    // Cargar no lectivos y festivos desde archivo externo
+    let data
+    try {
+        data = await fetchFile('./data/calendario' + year + '.txt')
+        if (!data) return [ nolectivos, festivos ]
+    } catch (error) {
+        return [ nolectivos, festivos ]
+    }
+
+    // Añadir días no lectivos de navidad y pascua
+    pascuaNoLectivos(year).forEach(element => nolectivos.add(element));
+    navidadNoLectivos(year).forEach(element => nolectivos.add(element));
 
     const lines = data.split('\n')
     for (const line of lines) {

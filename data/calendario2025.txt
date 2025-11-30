@@ -1,7 +1,7 @@
-1,1,año nuevo
-6,1,reyes
-17,4,jueves santo
-18,4,viernes santo
+1,1festivo,año nuevo
+6,1,festivo,reyes
+17,4,festivo,jueves santo
+18,4,festivo,viernes santo
 1,5,festivo,día del trabajo
 2,5,festivo,día de la comunidad de madrid
 15,5,festivo,san isidro

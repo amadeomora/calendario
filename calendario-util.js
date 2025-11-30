@@ -26,15 +26,13 @@ function renderMonth(target, year, month, nolectivos, festivos, render, before, 
     thCaption.textContent = `${monthNames[month - 1]} ${year}`;
     if (month === before) {
         // enlace al año anterior
-        const onclick = `${render}('${target}', ${year-1}); return false;`;
+        const prevYear = year - 1;
+        const onclick = `${render}('${target}', ${prevYear}); return false;`;
         thCaption.innerHTML = `<a href="#" onclick="${onclick}">&#9664;</a> ` + thCaption.innerHTML;
     }
     if (month === after) {
         // enlace al año siguiente
-        let nextYear = year
-        if (month === 12) {
-            nextYear++
-        }
+        const nextYear = month === 12 ? year + 1 : year;
         const onclick = `${render}('${target}', ${nextYear}); return false;`;
         thCaption.innerHTML += ` <a href="#" onclick="${onclick}">&#9654;</a>`;
     }

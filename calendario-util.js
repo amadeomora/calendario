@@ -31,7 +31,11 @@ function renderMonth(target, year, month, nolectivos, festivos, render, before, 
     }
     if (month === after) {
         // enlace al año siguiente
-        const onclick = `${render}('${target}', ${year+1}); return false;`;
+        let nextYear = year
+        if (month === 12) {
+            nextYear++
+        }
+        const onclick = `${render}('${target}', ${nextYear}); return false;`;
         thCaption.innerHTML += ` <a href="#" onclick="${onclick}">&#9654;</a>`;
     }
     trCaption.appendChild(thCaption);

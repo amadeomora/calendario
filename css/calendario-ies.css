@@ -1,4 +1,4 @@
-.calendario-anual { font: normal 12px Tahoma, Arial, sans-serif; margin: 0; padding: 0; padding-bottom: 1.5em; text-align: center;}
+.calendario-anual { font: normal 12px Tahoma, Arial, sans-serif; margin: 0; padding: 0; padding-bottom: 1.5em; text-align: left;}
 .calendario-anual table { display: inline-block; vertical-align: top; margin-bottom: 0.25rem;}
 .calendario { font-size: 100%; text-align: center; border: 1px solid #ddd; margin: 0.5em;}
 .calendario a { color: #033799; text-decoration: none;}
@@ -8,3 +8,4 @@
 .calendario td.festivo { background-color: #f00; color: #fff;}
 .calendario td.nolectivo { background-color: orange; color: #fff;}
 .calendario-caption { color: #033799; font-weight: bold; padding: 0.2em;}
+br { clear: both; }
